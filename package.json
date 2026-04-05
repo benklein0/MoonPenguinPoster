@@ -1,0 +1,20 @@
+{
+  "name": "moonpenguin-poster",
+  "version": "1.0.0",
+  "description": "Auto-posts TheMoonPenguinShop Etsy listings to Instagram Reels",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node src/test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.20.0",
+    "axios": "^1.6.0",
+    "node-cron": "^3.0.3",
+    "rss-parser": "^3.13.0",
+    "sharp": "^0.33.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "form-data": "^4.0.0",
+    "dotenv": "^16.3.1"
+  }
+}
