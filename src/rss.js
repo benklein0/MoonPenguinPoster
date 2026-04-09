@@ -2,7 +2,15 @@
 const RSSParser = require('rss-parser');
 const axios = require('axios');
 const parser = new RSSParser({
-  customFields: { item: ['media:content', 'media:thumbnail', 'g:price'] }
+  customFields: {
+    item: [
+      'media:content',
+      'media:thumbnail',
+      'g:price',
+      ['content:encoded', 'content'],
+      'description'
+    ]
+  }
 });
 
 const FEED_URL = 'https://www.etsy.com/shop/TheMoonPenguinShop/rss';
@@ -105,13 +113,37 @@ async function scrapePriceFromListing(url) {
 
 function itemToListing(item) {
   let imageUrl = null;
+
+  // Try standard RSS image fields
   if (item['media:content']?.['$']?.url) imageUrl = item['media:content']['$'].url;
   else if (item['media:thumbnail']?.['$']?.url) imageUrl = item['media:thumbnail']['$'].url;
   else if (item.enclosure?.url) imageUrl = item.enclosure.url;
 
+  // Try parsing image from description/content HTML (Etsy embeds <img> tags)
+  if (!imageUrl) {
+    const html = item.content || item['content:encoded'] || item.description || '';
+    const imgMatch = html.match(/<img[^>]+src=["']([^"']+etsystatic[^"']+)["']/i);
+    if (imgMatch) {
+      // Upgrade to full resolution
+      imageUrl = imgMatch[1].replace(/il_\d+xN/, 'il_fullxfull').replace(/il_\d+x\d+/, 'il_fullxfull');
+    }
+  }
+
+  // Try link field - construct etsystatic URL from listing ID
+  // Etsy CDN pattern: we can try to get the shop's images via a known pattern
+  if (!imageUrl) {
+    const listingIdMatch = (item.link || '').match(/\/listing\/(\d+)\//);
+    if (listingIdMatch) {
+      // Store listing ID for later use
+      item._listingId = listingIdMatch[1];
+    }
+  }
+
   let price = null;
-  const priceMatch = (item.content || item.contentSnippet || '').match(/\$[\d,]+\.?\d*/);
-  if (priceMatch) price = priceMatch[0];
+  // Try to get price from content HTML
+  const html = item.content || item['content:encoded'] || item.description || '';
+  const priceMatch = html.match(/\$([\d,]+\.\d{2})/);
+  if (priceMatch) price = `$${priceMatch[1]}`;
 
   const title = item.title ? item.title.replace(/\s+by TheMoonPenguinShop$/, '').trim() : 'New Item';
 
@@ -122,7 +154,8 @@ function itemToListing(item) {
     imageUrl,
     listingUrl: item.link,
     description: item.contentSnippet || '',
-    pubDate: item.pubDate || null
+    pubDate: item.pubDate || null,
+    _listingId: item._listingId || null
   };
 }
 
