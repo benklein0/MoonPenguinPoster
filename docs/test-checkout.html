@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Test — The Moon Penguin Shop</title>
+  <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    body { font-family: Georgia, serif; max-width: 500px; margin: 100px auto; padding: 24px; text-align: center; }
+    h1 { font-size: 1.5rem; margin-bottom: 8px; }
+    p { color: #666; margin-bottom: 32px; }
+    button {
+      background: #1a1612; color: white; border: none;
+      padding: 16px 40px; font-size: 1rem; cursor: pointer;
+      letter-spacing: 0.1em;
+    }
+    button:hover { background: #c9a96e; color: #1a1612; }
+    #status { margin-top: 16px; color: #666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>🐧 Checkout Test</h1>
+  <p>Test product — $0.50<br>This is just to verify the payment flow works end to end.</p>
+  <button onclick="testCheckout()">Buy Now — $0.50</button>
+  <div id="status"></div>
+
+  <script>
+    const stripe = Stripe('pk_live_51QYBNI07mBpGH0WMuI5clu9FlwIhISlJtuimmmLUUCpExEIvzUGtd7dXOYt9VWwnlGlk9PDeaGZhcZ55wlUZJ11O00NJJi5e3K');
+
+    async function testCheckout() {
+      document.getElementById('status').textContent = 'Loading...';
+      try {
+        const res = await fetch('https://moonpenguin-checkout.vercel.app/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title: 'Test Product — Checkout Verification',
+            price: 0.50,
+            image: 'https://i.etsystatic.com/49661368/r/il/f5c859/7484267574/il_fullxfull.7484267574_s1q0.jpg',
+            productId: 'test'
+          })
+        });
+        const { sessionId, error } = await res.json();
+        if (error) throw new Error(error);
+        await stripe.redirectToCheckout({ sessionId });
+      } catch (err) {
+        document.getElementById('status').textContent = 'Error: ' + err.message;
+        console.error(err);
+      }
+    }
+  </script>
+</body>
+</html>
