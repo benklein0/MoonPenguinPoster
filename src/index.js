@@ -73,10 +73,15 @@ async function runPipeline() {
     console.log('\n📝 Caption preview:\n', caption.substring(0, 150) + '...\n');
 
     if (reelType === 'voiceover' && process.env.ELEVENLABS_API_KEY) {
-      // Voiceover ad reel
-      const script = await generateVoiceoverScript(listing);
-      const voiceoverPath = await generateVoiceover(script);
-      videoPath = await createVoiceoverReel(listing, voiceoverPath);
+      // Voiceover ad reel — fall back to standard if it fails
+      try {
+        const script = await generateVoiceoverScript(listing);
+        const voiceoverPath = await generateVoiceover(script);
+        videoPath = await createVoiceoverReel(listing, voiceoverPath);
+      } catch (voErr) {
+        console.warn('⚠️  Voiceover failed, falling back to standard reel:', voErr.message);
+        videoPath = await createReel(listing);
+      }
     } else {
       // Standard text overlay reel
       videoPath = await createReel(listing);
