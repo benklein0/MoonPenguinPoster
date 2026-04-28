@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — The Moon Penguin Shop</title>
+  <meta name="description" content="Browse all handmade brass and resin accessories from TheMoonPenguinShop. Pill boxes, bag hooks, compact mirrors and more — made by hand in Westport, CT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    :root {
+      --cream: #f5f0e8;
+      --warm-white: #faf7f2;
+      --gold: #c9a96e;
+      --gold-light: #e8d5b0;
+      --dark: #1a1612;
+      --mid: #5c4f3d;
+      --muted: #9e8e7a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--warm-white); color: var(--dark); font-family: 'Jost', sans-serif; font-weight: 300; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 48px;
+      background: rgba(250,247,242,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--dark); text-decoration: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+    /* HERO */
+    .shop-hero {
+      padding: 140px 80px 60px;
+      background: var(--cream);
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .shop-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 300; }
+    .shop-hero h1 em { font-style: italic; color: var(--gold); }
+    .product-count { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+
+    /* FILTERS */
+    .filters {
+      padding: 24px 80px;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+      display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+    }
+    .filter-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-right: 8px; }
+    .filter-btn {
+      padding: 7px 18px;
+      border: 1px solid rgba(201,169,110,0.4);
+      background: transparent;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--mid);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active { background: var(--dark); color: var(--cream); border-color: var(--dark); }
+    .search-box {
+      margin-left: auto;
+      padding: 7px 16px;
+      border: 1px solid rgba(201,169,110,0.4);
+      background: transparent;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      color: var(--dark);
+      width: 220px;
+      outline: none;
+    }
+    .search-box::placeholder { color: var(--muted); }
+
+    /* GRID */
+    .shop-grid {
+      padding: 48px 80px 80px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .product-card { cursor: pointer; }
+    .product-image {
+      aspect-ratio: 1; background: var(--cream); overflow: hidden; position: relative; margin-bottom: 14px;
+    }
+    .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .product-card:hover .product-image img { transform: scale(1.06); }
+    .product-badge {
+      position: absolute; top: 10px; left: 10px;
+      background: var(--dark); color: var(--cream);
+      font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 9px;
+    }
+    .product-badge.sold-out { background: var(--muted); }
+    .product-name { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; margin-bottom: 4px; line-height: 1.3; }
+    .product-price { font-size: 0.82rem; color: var(--gold); letter-spacing: 0.05em; }
+    .product-qty { font-size: 0.7rem; color: var(--muted); margin-top: 2px; }
+
+    /* NO RESULTS */
+    .no-results { grid-column: 1/-1; text-align: center; padding: 80px; color: var(--muted); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; }
+
+    /* MODAL */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(26,22,18,0.7); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center; padding: 24px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--warm-white); max-width: 900px; width: 100%; max-height: 90vh;
+      overflow-y: auto; position: relative;
+      display: grid; grid-template-columns: 1fr 1fr;
+    }
+    .modal-images { background: var(--cream); position: sticky; top: 0; height: fit-content; }
+    .modal-main-img { aspect-ratio: 1; overflow: hidden; }
+    .modal-main-img img { width: 100%; height: 100%; object-fit: cover; }
+    .modal-thumbs { display: flex; gap: 4px; padding: 8px; overflow-x: auto; }
+    .modal-thumb { width: 56px; height: 56px; flex-shrink: 0; overflow: hidden; cursor: pointer; border: 2px solid transparent; transition: border-color 0.2s; }
+    .modal-thumb.active { border-color: var(--gold); }
+    .modal-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .modal-info { padding: 40px; display: flex; flex-direction: column; }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px;
+      background: none; border: none; cursor: pointer;
+      font-size: 1.5rem; color: var(--mid); z-index: 10; line-height: 1;
+    }
+    .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin-bottom: 12px; line-height: 1.2; }
+    .modal-price { font-size: 1.4rem; color: var(--gold); margin-bottom: 20px; }
+    .modal-desc { font-size: 0.88rem; line-height: 1.8; color: var(--mid); margin-bottom: 28px; flex: 1; }
+    .modal-materials { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+    .modal-qty { font-size: 0.78rem; color: var(--muted); margin-bottom: 20px; }
+    .btn-buy {
+      background: var(--dark); color: var(--cream);
+      border: none; padding: 16px 32px;
+      font-family: 'Jost', sans-serif; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.3s; width: 100%;
+    }
+    .btn-buy:hover { background: var(--gold); color: var(--dark); }
+    .btn-buy:disabled { background: var(--muted); cursor: not-allowed; }
+    .btn-etsy {
+      background: transparent; color: var(--mid);
+      border: 1px solid rgba(201,169,110,0.4);
+      padding: 12px 32px; margin-top: 10px;
+      font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.3s; width: 100%; text-decoration: none; display: block; text-align: center;
+    }
+    .btn-etsy:hover { border-color: var(--gold); color: var(--gold); }
+    .loading-spinner { display: none; text-align: center; padding: 8px; font-size: 0.78rem; color: var(--muted); }
+
+    /* FOOTER */
+    footer { background: var(--dark); color: var(--cream); padding: 40px 80px; display: flex; justify-content: space-between; align-items: center; }
+    footer a { color: var(--gold-light); text-decoration: none; font-size: 0.78rem; opacity: 0.6; }
+    footer a:hover { opacity: 1; }
+    .footer-copy { font-size: 0.75rem; opacity: 0.4; }
+
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .shop-hero { padding: 100px 24px 40px; flex-direction: column; gap: 8px; }
+      .filters { padding: 16px 24px; }
+      .search-box { margin-left: 0; width: 100%; }
+      .shop-grid { padding: 32px 24px; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .modal { grid-template-columns: 1fr; max-height: 95vh; }
+      .modal-images { position: static; }
+      footer { flex-direction: column; gap: 16px; padding: 32px 24px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">The Moon Penguin Shop</a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/shop.html" class="active">Shop</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="https://www.instagram.com/themoonpenguinshop" target="_blank">Instagram</a></li>
+  </ul>
+</nav>
+
+<div class="shop-hero">
+  <div>
+    <h1>The <em>Full</em> Collection</h1>
+    <p style="color:var(--mid);font-size:0.88rem;margin-top:8px;line-height:1.8;">194 handmade pieces — each one lovingly crafted by hand in Westport, CT</p>
+  </div>
+  <div class="product-count" id="count-display">194 pieces</div>
+</div>
+
+<div class="filters">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="pill box">Pill Boxes</button>
+  <button class="filter-btn" data-filter="bag hook">Bag Hooks</button>
+  <button class="filter-btn" data-filter="compact mirror">Compact Mirrors</button>
+  <button class="filter-btn" data-filter="keychain">Keychains</button>
+  <button class="filter-btn" data-filter="cufflinks">Cufflinks</button>
+  <input type="text" class="search-box" placeholder="Search products..." id="search-input">
+</div>
+
+<div class="shop-grid" id="product-grid">
+  <div class="no-results">Loading products...</div>
+</div>
+
+<!-- Product Modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div class="modal-images">
+      <div class="modal-main-img"><img id="modal-main-img" src="" alt=""></div>
+      <div class="modal-thumbs" id="modal-thumbs"></div>
+    </div>
+    <div class="modal-info">
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-price" id="modal-price"></div>
+      <div class="modal-qty" id="modal-qty"></div>
+      <div class="modal-desc" id="modal-desc"></div>
+      <div class="modal-materials" id="modal-materials"></div>
+      <button class="btn-buy" id="btn-buy">Buy Now — Checkout</button>
+      <div class="loading-spinner" id="loading-spinner">Processing...</div>
+      <a href="#" class="btn-etsy" id="btn-etsy" target="_blank">View on Etsy</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <a href="/" class="nav-logo" style="color:var(--cream);opacity:0.8;font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:0.15em;text-transform:uppercase;">The Moon Penguin Shop</a>
+  <div style="display:flex;gap:32px;">
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms</a>
+    <a href="https://www.etsy.com/shop/TheMoonPenguinShop" target="_blank">Etsy Shop</a>
+  </div>
+  <div class="footer-copy">© 2026 The Moon Penguin Shop · Handmade in Westport, CT</div>
+</footer>
+
+<script>
+const STRIPE_KEY = 'pk_live_51QYBNI07mBpGH0WMuI5clu9FlwIhISlJtuimmmLUUCpExEIvzUGtd7dXOYt9VWwnlGlk9PDeaGZhcZ55wlUZJ11O00NJJi5e3K';
+const CHECKOUT_API = 'https://moonpenguin-checkout.vercel.app/api/checkout'; // we'll deploy this next
+const stripe = Stripe(STRIPE_KEY);
+
+let products = [];
+let currentProduct = null;
+let activeFilter = 'all';
+let searchQuery = '';
+
+// Load products
+async function loadProducts() {
+  const res = await fetch('/products.json');
+  products = await res.json();
+  renderGrid();
+}
+
+function getEtsySlug(title) {
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').substring(0, 60);
+}
+
+function getEtsyUrl(product) {
+  // Best effort - link to shop search
+  return `https://www.etsy.com/shop/TheMoonPenguinShop`;
+}
+
+function filterProducts() {
+  return products.filter(p => {
+    const titleLower = p.title.toLowerCase();
+    const matchesFilter = activeFilter === 'all' || titleLower.includes(activeFilter);
+    const matchesSearch = !searchQuery || titleLower.includes(searchQuery) || 
+      (p.tags && p.tags.some(t => t.toLowerCase().includes(searchQuery)));
+    return matchesFilter && matchesSearch;
+  });
+}
+
+function renderGrid() {
+  const filtered = filterProducts();
+  const grid = document.getElementById('product-grid');
+  document.getElementById('count-display').textContent = `${filtered.length} piece${filtered.length !== 1 ? 's' : ''}`;
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="no-results">No products found</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => `
+    <div class="product-card" onclick="openModal(${p.id})">
+      <div class="product-image">
+        ${p.quantity === 1 ? '<span class="product-badge">1 left</span>' : ''}
+        ${!p.inStock ? '<span class="product-badge sold-out">Sold Out</span>' : ''}
+        <img src="${p.images[0] || ''}" alt="${p.title}" loading="lazy">
+      </div>
+      <div class="product-name">${p.title}</div>
+      <div class="product-price">$${p.price.toFixed(0)}</div>
+      ${p.quantity > 1 ? `<div class="product-qty">${p.quantity} available</div>` : ''}
+    </div>
+  `).join('');
+}
+
+function openModal(id) {
+  const product = products.find(p => p.id === id);
+  if (!product) return;
+  currentProduct = product;
+
+  document.getElementById('modal-title').textContent = product.title;
+  document.getElementById('modal-price').textContent = `$${product.price.toFixed(2)}`;
+  document.getElementById('modal-qty').textContent = product.quantity === 1 ? '⚠️ Only 1 left' : `${product.quantity} available`;
+  document.getElementById('modal-desc').textContent = product.description;
+  document.getElementById('modal-materials').textContent = product.materials ? `Materials: ${product.materials}` : '';
+  document.getElementById('btn-etsy').href = getEtsyUrl(product);
+
+  // Main image
+  const mainImg = document.getElementById('modal-main-img');
+  mainImg.src = product.images[0] || '';
+  mainImg.alt = product.title;
+
+  // Thumbnails
+  const thumbsEl = document.getElementById('modal-thumbs');
+  thumbsEl.innerHTML = product.images.map((img, i) => `
+    <div class="modal-thumb ${i === 0 ? 'active' : ''}" onclick="setModalImage('${img}', this)">
+      <img src="${img}" alt="">
+    </div>
+  `).join('');
+
+  // Buy button
+  const buyBtn = document.getElementById('btn-buy');
+  buyBtn.disabled = !product.inStock;
+  buyBtn.textContent = product.inStock ? 'Buy Now — Checkout' : 'Out of Stock';
+
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function setModalImage(src, thumbEl) {
+  document.getElementById('modal-main-img').src = src;
+  document.querySelectorAll('.modal-thumb').forEach(t => t.classList.remove('active'));
+  thumbEl.classList.add('active');
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+  currentProduct = null;
+}
+
+// Stripe checkout
+document.getElementById('btn-buy').addEventListener('click', async () => {
+  if (!currentProduct) return;
+  
+  const btn = document.getElementById('btn-buy');
+  const spinner = document.getElementById('loading-spinner');
+  
+  btn.style.display = 'none';
+  spinner.style.display = 'block';
+
+  try {
+    const response = await fetch(CHECKOUT_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        title: currentProduct.title,
+        price: currentProduct.price,
+        image: currentProduct.images[0],
+        productId: currentProduct.id
+      })
+    });
+
+    const { sessionId } = await response.json();
+    await stripe.redirectToCheckout({ sessionId });
+  } catch (err) {
+    console.error('Checkout error:', err);
+    alert('Something went wrong. Please try purchasing on Etsy instead.');
+    btn.style.display = 'block';
+    spinner.style.display = 'none';
+  }
+});
+
+// Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    renderGrid();
+  });
+});
+
+// Search
+document.getElementById('search-input').addEventListener('input', e => {
+  searchQuery = e.target.value.toLowerCase().trim();
+  renderGrid();
+});
+
+// Close modal
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+loadProducts();
+</script>
+</body>
+</html>
