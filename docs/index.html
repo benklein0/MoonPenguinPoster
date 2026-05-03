@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="apple-touch-icon" href="/favicon-192.png">
   <meta name="p:domain_verify" content="38854cf4ec036f9141cfe1280e5f520d"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Moon Penguin Shop — Fancy Things to Give and Keep</title>
@@ -576,9 +579,11 @@
       gap: 20px;
       justify-content: center;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     .btn-primary {
+      display: inline-block;
       background: var(--dark);
       color: var(--cream);
       padding: 16px 40px;
@@ -588,11 +593,13 @@
       text-transform: uppercase;
       text-decoration: none;
       transition: all 0.3s;
+      cursor: pointer;
     }
 
     .btn-primary:hover { background: var(--gold); color: var(--dark); }
 
     .btn-secondary {
+      display: inline-block;
       border: 1px solid var(--dark);
       color: var(--dark);
       padding: 16px 40px;
@@ -602,6 +609,7 @@
       text-transform: uppercase;
       text-decoration: none;
       transition: all 0.3s;
+      cursor: pointer;
     }
 
     .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
