@@ -25,7 +25,14 @@
       "travel storage"
     ],
     "materials": "Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 2,
@@ -55,7 +62,15 @@
       "portable non slip"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 3,
@@ -84,7 +99,14 @@
       "Brass pill box"
     ],
     "materials": "Resin,brass stamping,metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "White"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 4,
@@ -110,7 +132,14 @@
       "get well present"
     ],
     "materials": "Resin,metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 5,
@@ -138,7 +167,14 @@
       "portable non slip"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Red"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 6,
@@ -166,7 +202,14 @@
       "get well present"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Red"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 7,
@@ -195,7 +238,14 @@
       "resin keepsake tin"
     ],
     "materials": "Metal,Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Red"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 8,
@@ -222,7 +272,14 @@
       "large square compact"
     ],
     "materials": "Brass,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 9,
@@ -249,7 +306,14 @@
       "travel storage"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 10,
@@ -279,7 +343,14 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 11,
@@ -307,7 +378,14 @@
       "drug container"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 12,
@@ -336,7 +414,14 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Black"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 13,
@@ -363,7 +448,14 @@
       "fancy pill case"
     ],
     "materials": "Metal,Brass,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Red"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 14,
@@ -393,7 +485,12 @@
       "portable non slip"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Red"
+    ],
+    "charm": []
   },
   {
     "id": 15,
@@ -419,7 +516,14 @@
       "nightstand decor"
     ],
     "materials": "Metal,Steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 16,
@@ -447,7 +551,15 @@
       "luxury decor fancy"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue",
+      "Black"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 17,
@@ -474,7 +586,13 @@
       "rampant Leo birthday"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Black"
+    ],
+    "charm": [
+      "Lion & Zodiac"
+    ]
   },
   {
     "id": 18,
@@ -502,7 +620,11 @@
       "touchup sleek purse"
     ],
     "materials": "Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Black"
+    ],
+    "charm": []
   },
   {
     "id": 19,
@@ -531,7 +653,14 @@
       "resin keepsake tin"
     ],
     "materials": "Metal,Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Pink"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 20,
@@ -560,7 +689,15 @@
       "weekly meds storage"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Blue",
+      "Pink",
+      "Pastel"
+    ],
+    "charm": [
+      "Elephant"
+    ]
   },
   {
     "id": 21,
@@ -590,7 +727,13 @@
       "brass medicine tin"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Black"
+    ],
+    "charm": [
+      "Lion & Zodiac"
+    ]
   },
   {
     "id": 22,
@@ -618,7 +761,15 @@
       "antiqued brass tin"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 23,
@@ -648,7 +799,14 @@
       "portable non slip"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 24,
@@ -676,7 +834,14 @@
       "stylish keepsake"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 25,
@@ -705,7 +870,14 @@
       "portable non slip"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 26,
@@ -735,7 +907,13 @@
       "two compartments"
     ],
     "materials": "Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Blue"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 27,
@@ -762,7 +940,15 @@
       "travel storage"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Pink",
+      "Pastel"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 28,
@@ -790,7 +976,14 @@
       "travel accessories"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "Blue"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 29,
@@ -819,7 +1012,12 @@
       "Bon Voyage gift"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue"
+    ],
+    "charm": []
   },
   {
     "id": 30,
@@ -846,7 +1044,12 @@
       "two compartment chic"
     ],
     "materials": "Metal,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Red"
+    ],
+    "charm": []
   },
   {
     "id": 31,
@@ -873,7 +1076,13 @@
       "compact mirror"
     ],
     "materials": "Metal,Resin,Mirror,Brass",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 32,
@@ -900,7 +1109,13 @@
       "two compartments"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 33,
@@ -930,7 +1145,13 @@
       "handmade stash tin"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Silver",
+      "White"
+    ],
+    "charm": []
   },
   {
     "id": 34,
@@ -960,7 +1181,12 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": []
   },
   {
     "id": 35,
@@ -988,7 +1214,14 @@
       "July birthday"
     ],
     "materials": "Metal,Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "Red"
+    ],
+    "charm": [
+      "Lion & Zodiac"
+    ]
   },
   {
     "id": 36,
@@ -1015,7 +1248,14 @@
       "resin keepsake tin"
     ],
     "materials": "Metal,Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Pink"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 37,
@@ -1043,7 +1283,14 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "White"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 38,
@@ -1073,7 +1320,13 @@
       "stylish keepsake"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Blue"
+    ],
+    "charm": [
+      "Elephant"
+    ]
   },
   {
     "id": 39,
@@ -1101,7 +1354,13 @@
       "two compartments"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 40,
@@ -1128,7 +1387,14 @@
       "stylish keepsake"
     ],
     "materials": "Resin,metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "Red"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 41,
@@ -1155,7 +1421,11 @@
       "Bon Voyage gift"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Blue"
+    ],
+    "charm": []
   },
   {
     "id": 42,
@@ -1182,7 +1452,12 @@
       "metal resin case"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": []
   },
   {
     "id": 43,
@@ -1209,7 +1484,14 @@
       "counter collapsible"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "Red"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 44,
@@ -1239,7 +1521,11 @@
       "get well present"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": []
   },
   {
     "id": 45,
@@ -1268,7 +1554,14 @@
       "brass English Lion"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "Blue"
+    ],
+    "charm": [
+      "Lion & Zodiac"
+    ]
   },
   {
     "id": 46,
@@ -1294,7 +1587,14 @@
       "cute pill organizer"
     ],
     "materials": "Stainless steel,Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Red"
+    ],
+    "charm": [
+      "Fox"
+    ]
   },
   {
     "id": 47,
@@ -1322,7 +1622,15 @@
       "drug organizer"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "Pink",
+      "Pastel"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 48,
@@ -1350,7 +1658,13 @@
       "drug organizer"
     ],
     "materials": "Acrylic,Brass",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 49,
@@ -1377,7 +1691,14 @@
       "chrome finish"
     ],
     "materials": "Steel",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Pink"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 50,
@@ -1406,7 +1727,15 @@
       "three compartment"
     ],
     "materials": "Steel,Metal,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 51,
@@ -1435,7 +1764,15 @@
       "foldable bag round"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Bronze",
+      "White"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 52,
@@ -1465,7 +1802,14 @@
       "gift for Deborah"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 53,
@@ -1492,7 +1836,14 @@
       "seven compartments"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Red"
+    ],
+    "charm": [
+      "Fox"
+    ]
   },
   {
     "id": 54,
@@ -1521,7 +1872,14 @@
       "fantasy fairytale"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": [
+      "Unicorn"
+    ]
   },
   {
     "id": 55,
@@ -1550,7 +1908,11 @@
       "drug organizer"
     ],
     "materials": "Metal,Steel,Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": []
   },
   {
     "id": 56,
@@ -1580,7 +1942,15 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 57,
@@ -1609,7 +1979,15 @@
       "gift for Deborah"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue",
+      "Green"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 58,
@@ -1638,7 +2016,14 @@
       "get well gift"
     ],
     "materials": "Metal,Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Pink",
+      "Pastel"
+    ],
+    "charm": [
+      "Unicorn"
+    ]
   },
   {
     "id": 59,
@@ -1665,7 +2050,14 @@
       "seven compartments"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 60,
@@ -1693,7 +2085,12 @@
       "medicine organizer"
     ],
     "materials": "Brass,Resin,Stainless steel",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "Blue"
+    ],
+    "charm": []
   },
   {
     "id": 61,
@@ -1719,7 +2116,13 @@
       "drug container"
     ],
     "materials": "Brass,Metal,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": [
+      "Unicorn"
+    ]
   },
   {
     "id": 62,
@@ -1749,7 +2152,14 @@
       "two compartments"
     ],
     "materials": "Metal,Brass,Resin,Mirror,Stainless steel",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Black"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 63,
@@ -1779,7 +2189,13 @@
       "ready to ship"
     ],
     "materials": "Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Black"
+    ],
+    "charm": [
+      "Fox"
+    ]
   },
   {
     "id": 64,
@@ -1809,7 +2225,13 @@
       "portable non slip"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue",
+      "Pastel"
+    ],
+    "charm": []
   },
   {
     "id": 65,
@@ -1838,7 +2260,12 @@
       "portable non slip"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": []
   },
   {
     "id": 66,
@@ -1865,7 +2292,14 @@
       "seven compartments"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": [
+      "Skull & Pirate"
+    ]
   },
   {
     "id": 67,
@@ -1892,7 +2326,12 @@
       "black resin pill box"
     ],
     "materials": "Metal,Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Black"
+    ],
+    "charm": []
   },
   {
     "id": 68,
@@ -1919,7 +2358,14 @@
       "drug organizer"
     ],
     "materials": "Brass,Resin,Metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 69,
@@ -1947,7 +2393,13 @@
       "vitamin storage"
     ],
     "materials": "Brass",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 70,
@@ -1974,7 +2426,14 @@
       "weekly meds storage"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 71,
@@ -2002,7 +2461,14 @@
       "Bon voyage present"
     ],
     "materials": "Stainless steel",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Green",
+      "Pastel"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 72,
@@ -2029,7 +2495,14 @@
       "brass"
     ],
     "materials": "Resin,brass stamping,metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": [
+      "Lion & Zodiac"
+    ]
   },
   {
     "id": 73,
@@ -2057,7 +2530,13 @@
       "drug organizer"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Black"
+    ],
+    "charm": [
+      "Skull & Pirate"
+    ]
   },
   {
     "id": 74,
@@ -2087,7 +2566,14 @@
       "glossy epoxy resin"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 75,
@@ -2117,7 +2603,13 @@
       "turquoise container"
     ],
     "materials": "Metal,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue",
+      "Green"
+    ],
+    "charm": []
   },
   {
     "id": 76,
@@ -2145,7 +2637,13 @@
       "two compartments"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Black"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 77,
@@ -2175,7 +2673,14 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Pink"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 78,
@@ -2204,7 +2709,12 @@
       "dog greyhound runner"
     ],
     "materials": "Metal,Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": []
   },
   {
     "id": 79,
@@ -2231,7 +2741,13 @@
       "travel storage"
     ],
     "materials": "Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Pink"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 80,
@@ -2260,7 +2776,11 @@
       "teacher gift"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": []
   },
   {
     "id": 81,
@@ -2290,7 +2810,13 @@
       "drug organizer"
     ],
     "materials": "Acrylic,Brass",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 82,
@@ -2320,7 +2846,14 @@
       "two compartment"
     ],
     "materials": "Stainless steel,Resin,Metal,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": [
+      "Fox"
+    ]
   },
   {
     "id": 83,
@@ -2348,7 +2881,13 @@
       "weekly meds storage"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 84,
@@ -2376,7 +2915,13 @@
       "Bon Voyage gift"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 85,
@@ -2404,7 +2949,11 @@
       "stylish keepsake"
     ],
     "materials": "Metal,Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": []
   },
   {
     "id": 86,
@@ -2433,7 +2982,14 @@
       "stylish keepsake"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 87,
@@ -2463,7 +3019,15 @@
       "portable non slip"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 88,
@@ -2491,7 +3055,13 @@
       "two compartments"
     ],
     "materials": "Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Black"
+    ],
+    "charm": [
+      "Elephant"
+    ]
   },
   {
     "id": 89,
@@ -2518,7 +3088,14 @@
       "cute pill organizer"
     ],
     "materials": "Brass,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Green"
+    ],
+    "charm": [
+      "Fox"
+    ]
   },
   {
     "id": 90,
@@ -2547,7 +3124,15 @@
       "seven compartments"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 91,
@@ -2576,7 +3161,13 @@
       "travel storage"
     ],
     "materials": "Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Green"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 92,
@@ -2604,7 +3195,11 @@
       "metal resin case"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Green"
+    ],
+    "charm": []
   },
   {
     "id": 93,
@@ -2632,7 +3227,14 @@
       "drug container"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Green"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 94,
@@ -2660,7 +3262,14 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Green"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 95,
@@ -2690,7 +3299,11 @@
       "kawaii pill box"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold"
+    ],
+    "charm": []
   },
   {
     "id": 96,
@@ -2719,7 +3332,11 @@
       "three compartment"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Black"
+    ],
+    "charm": []
   },
   {
     "id": 97,
@@ -2746,7 +3363,14 @@
       "Bon voyage present"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Pink",
+      "Pastel"
+    ],
+    "charm": [
+      "Skull & Pirate"
+    ]
   },
   {
     "id": 98,
@@ -2774,7 +3398,14 @@
       "travel accessories"
     ],
     "materials": "Brass,Metal,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "White"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 99,
@@ -2804,7 +3435,13 @@
       "gothic medicine case"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Pink"
+    ],
+    "charm": [
+      "Skull & Pirate"
+    ]
   },
   {
     "id": 100,
@@ -2834,7 +3471,11 @@
       "large square compact"
     ],
     "materials": "Brass,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": []
   },
   {
     "id": 101,
@@ -2860,7 +3501,13 @@
       "drug organizer"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Pink"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 102,
@@ -2887,7 +3534,12 @@
       "luxury decor fancy"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": []
   },
   {
     "id": 103,
@@ -2915,7 +3567,14 @@
       "seven compartments"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Black"
+    ],
+    "charm": [
+      "Fox"
+    ]
   },
   {
     "id": 104,
@@ -2945,7 +3604,12 @@
       "portable non slip"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": []
   },
   {
     "id": 105,
@@ -2975,7 +3639,14 @@
       "pocket drug organize"
     ],
     "materials": "Steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 106,
@@ -3004,7 +3675,14 @@
       "fancy pill case"
     ],
     "materials": "Metal,Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Black"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 107,
@@ -3033,7 +3711,14 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Black"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 108,
@@ -3061,7 +3746,12 @@
       "tooth fairy tin"
     ],
     "materials": "Resin,Mirror,Metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Pink"
+    ],
+    "charm": []
   },
   {
     "id": 109,
@@ -3088,7 +3778,14 @@
       "stylish keepsake"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 110,
@@ -3116,7 +3813,14 @@
       "travel storage"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Pink"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 111,
@@ -3144,7 +3848,14 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Red"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 112,
@@ -3170,7 +3881,15 @@
       "fancy pill case"
     ],
     "materials": "Metal,Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue",
+      "Black"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 113,
@@ -3197,7 +3916,13 @@
       "teacher gift"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 114,
@@ -3226,7 +3951,12 @@
       "luxury stylish gold"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": []
   },
   {
     "id": 115,
@@ -3256,7 +3986,14 @@
       "luxury decor fancy"
     ],
     "materials": "Metal,Steel,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 116,
@@ -3286,7 +4023,15 @@
       "portable non slip"
     ],
     "materials": "Brass,Resin,Metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Elephant"
+    ]
   },
   {
     "id": 117,
@@ -3313,7 +4058,13 @@
       "travel case"
     ],
     "materials": "Brass,Resin,Mirror,Metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": [
+      "Fox"
+    ]
   },
   {
     "id": 118,
@@ -3341,7 +4092,13 @@
       "teacher gift"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 119,
@@ -3368,7 +4125,14 @@
       "serpent motif"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red",
+      "White"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 120,
@@ -3398,7 +4162,12 @@
       "travel accessories"
     ],
     "materials": "Metal,Enamel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Pink",
+      "Pastel"
+    ],
+    "charm": []
   },
   {
     "id": 121,
@@ -3426,7 +4195,14 @@
       "large square compact"
     ],
     "materials": "Brass,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 122,
@@ -3454,7 +4230,13 @@
       "cherub motif theme"
     ],
     "materials": "Stainless steel",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Blue"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 123,
@@ -3481,7 +4263,14 @@
       "metal resin case"
     ],
     "materials": "Metal,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue"
+    ],
+    "charm": [
+      "Flower & Botanical"
+    ]
   },
   {
     "id": 124,
@@ -3511,7 +4300,13 @@
       "three compartment"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 125,
@@ -3539,7 +4334,11 @@
       "teacher gift"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": []
   },
   {
     "id": 126,
@@ -3569,7 +4368,13 @@
       "three compartment"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Black"
+    ],
+    "charm": [
+      "Skull & Pirate"
+    ]
   },
   {
     "id": 127,
@@ -3599,7 +4404,12 @@
       "large decor weekly"
     ],
     "materials": "Metal,Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": []
   },
   {
     "id": 128,
@@ -3627,7 +4437,12 @@
       "tiny silver keyring"
     ],
     "materials": "Stainless steel",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Black"
+    ],
+    "charm": []
   },
   {
     "id": 129,
@@ -3657,7 +4472,13 @@
       "Bon voyage"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 130,
@@ -3687,7 +4508,13 @@
       "foldable bag round"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Bronze",
+      "Pink"
+    ],
+    "charm": []
   },
   {
     "id": 131,
@@ -3714,7 +4541,14 @@
       "travel storage"
     ],
     "materials": "Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Green",
+      "Pastel"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 132,
@@ -3743,7 +4577,14 @@
       "organizer container"
     ],
     "materials": "Metal,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Black"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 133,
@@ -3771,7 +4612,15 @@
       "travel accessories"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 134,
@@ -3798,7 +4647,11 @@
       "get well present"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": []
   },
   {
     "id": 135,
@@ -3825,7 +4678,13 @@
       "kawaii pill box"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Pink"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 136,
@@ -3851,7 +4710,14 @@
       "get well sick friend"
     ],
     "materials": "Steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 137,
@@ -3878,7 +4744,12 @@
       "cute pretty trinket"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Pink"
+    ],
+    "charm": []
   },
   {
     "id": 138,
@@ -3906,7 +4777,15 @@
       "pocket drug organize"
     ],
     "materials": "Steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 139,
@@ -3933,7 +4812,14 @@
       "travel storage case"
     ],
     "materials": "Resin,brass stamping,metal,stainless steel",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": [
+      "Bird"
+    ]
   },
   {
     "id": 140,
@@ -3963,7 +4849,14 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Red"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 141,
@@ -3993,7 +4886,14 @@
       "two compartments"
     ],
     "materials": "Metal,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Pink"
+    ],
+    "charm": [
+      "Flower & Botanical"
+    ]
   },
   {
     "id": 142,
@@ -4022,7 +4922,14 @@
       "gorgeous fancy purse"
     ],
     "materials": "Metal,Aluminum,Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Pink"
+    ],
+    "charm": [
+      "Elephant"
+    ]
   },
   {
     "id": 143,
@@ -4050,7 +4957,14 @@
       "steel metal mirror"
     ],
     "materials": "Metal,Steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Green"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 144,
@@ -4077,7 +4991,14 @@
       "get well present"
     ],
     "materials": "Resin,metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 145,
@@ -4105,7 +5026,13 @@
       "travel storage"
     ],
     "materials": "Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Purple"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 146,
@@ -4131,7 +5058,13 @@
       "daily drug case"
     ],
     "materials": "Brass",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 147,
@@ -4158,7 +5091,14 @@
       "kawaii pill box"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 148,
@@ -4186,7 +5126,11 @@
       "round metal pill box"
     ],
     "materials": "Brass,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Purple"
+    ],
+    "charm": []
   },
   {
     "id": 149,
@@ -4214,7 +5158,13 @@
       "snake liver reptile"
     ],
     "materials": "Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Green"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 150,
@@ -4242,7 +5192,13 @@
       "two compartments"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Pink"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 151,
@@ -4270,7 +5226,14 @@
       "fancy pill case"
     ],
     "materials": "Metal,Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Black"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 152,
@@ -4299,7 +5262,14 @@
       "two compartments"
     ],
     "materials": "Metal,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Black"
+    ],
+    "charm": [
+      "Flower & Botanical"
+    ]
   },
   {
     "id": 153,
@@ -4326,7 +5296,14 @@
       "two compartments"
     ],
     "materials": "Metal,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Red"
+    ],
+    "charm": [
+      "Flower & Botanical"
+    ]
   },
   {
     "id": 154,
@@ -4355,7 +5332,14 @@
       "foldable bag round"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "Blue"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 155,
@@ -4379,7 +5363,12 @@
       "replacement strap"
     ],
     "materials": "resin,brass stamping",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Black",
+      "White"
+    ],
+    "charm": []
   },
   {
     "id": 156,
@@ -4409,7 +5398,15 @@
       "birthday present"
     ],
     "materials": "Stainless steel",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Pink",
+      "White"
+    ],
+    "charm": [
+      "Bunny & Rabbit"
+    ]
   },
   {
     "id": 157,
@@ -4438,7 +5435,14 @@
       "two compartment chic"
     ],
     "materials": "Metal,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Green"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 158,
@@ -4468,7 +5472,13 @@
       "chic accessories"
     ],
     "materials": "Metal,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Pink"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 159,
@@ -4495,7 +5505,12 @@
       "compact vitamin case"
     ],
     "materials": "Brass",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Black"
+    ],
+    "charm": []
   },
   {
     "id": 160,
@@ -4522,7 +5537,13 @@
       "butterfly organizer"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 161,
@@ -4552,7 +5573,13 @@
       "Bon voyage present"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 162,
@@ -4582,7 +5609,11 @@
       "brass pineapple blue"
     ],
     "materials": "Metal,Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Blue"
+    ],
+    "charm": []
   },
   {
     "id": 163,
@@ -4612,7 +5643,12 @@
       "nautical sailing"
     ],
     "materials": "Metal,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": []
   },
   {
     "id": 164,
@@ -4642,7 +5678,12 @@
       "stylish keepsake"
     ],
     "materials": "Brass,Resin,Metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Blue",
+      "Pastel"
+    ],
+    "charm": []
   },
   {
     "id": 165,
@@ -4669,7 +5710,14 @@
       "Bon voyage present"
     ],
     "materials": "Metal,Resin,Brass,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Butterfly"
+    ]
   },
   {
     "id": 166,
@@ -4699,7 +5747,14 @@
       "birthday present"
     ],
     "materials": "Stainless steel,Metal,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Red"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 167,
@@ -4725,7 +5780,11 @@
       "compact mirror"
     ],
     "materials": "Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Pink"
+    ],
+    "charm": []
   },
   {
     "id": 168,
@@ -4754,7 +5813,15 @@
       "stylish gifts"
     ],
     "materials": "Metal,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Blue",
+      "Pastel"
+    ],
+    "charm": [
+      "Flower & Botanical"
+    ]
   },
   {
     "id": 169,
@@ -4782,7 +5849,11 @@
       "compact mirror"
     ],
     "materials": "Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "White"
+    ],
+    "charm": []
   },
   {
     "id": 170,
@@ -4810,7 +5881,14 @@
       "compact pocket case"
     ],
     "materials": "Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": [
+      "Fox"
+    ]
   },
   {
     "id": 171,
@@ -4838,7 +5916,12 @@
       "get well present"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Red"
+    ],
+    "charm": []
   },
   {
     "id": 172,
@@ -4866,7 +5949,14 @@
       "fancy pretty unique"
     ],
     "materials": "Metal,Brass,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 173,
@@ -4893,7 +5983,14 @@
       "vitamin storage case"
     ],
     "materials": "Brass,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Red"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 174,
@@ -4922,7 +6019,15 @@
       "portable non slip"
     ],
     "materials": "Metal,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Pink",
+      "Pastel"
+    ],
+    "charm": [
+      "Flower & Botanical"
+    ]
   },
   {
     "id": 175,
@@ -4951,7 +6056,12 @@
       "pastel pink compact"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Pink",
+      "Pastel"
+    ],
+    "charm": []
   },
   {
     "id": 176,
@@ -4980,7 +6090,14 @@
       "portable non slip"
     ],
     "materials": "Resin,Metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Green"
+    ],
+    "charm": [
+      "Flower & Botanical"
+    ]
   },
   {
     "id": 177,
@@ -5009,7 +6126,15 @@
       "compact mirror"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Red"
+    ],
+    "charm": [
+      "Butterfly",
+      "Flower & Botanical"
+    ]
   },
   {
     "id": 178,
@@ -5038,7 +6163,14 @@
       "fancy pill case"
     ],
     "materials": "Metal,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 179,
@@ -5064,7 +6196,14 @@
       "foldable bag round"
     ],
     "materials": "Brass,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Bronze",
+      "White"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 180,
@@ -5093,7 +6232,14 @@
       "stainless steel red"
     ],
     "materials": "Metal,Stainless steel,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Red"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 181,
@@ -5120,7 +6266,12 @@
       "useful presents"
     ],
     "materials": "Resin,Metal",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Blue",
+      "Green"
+    ],
+    "charm": []
   },
   {
     "id": 182,
@@ -5148,7 +6299,12 @@
       "stainless steel chic"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": []
   },
   {
     "id": 183,
@@ -5177,7 +6333,14 @@
       "vitamin storage case"
     ],
     "materials": "Brass,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": [
+      "Moon & Celestial"
+    ]
   },
   {
     "id": 184,
@@ -5204,7 +6367,14 @@
       "handmade Bon voyage"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 185,
@@ -5231,7 +6401,11 @@
       "toiletry bag purse"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Red"
+    ],
+    "charm": []
   },
   {
     "id": 186,
@@ -5260,7 +6434,13 @@
       "vitamin storage case"
     ],
     "materials": "Brass,Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue",
+      "Green"
+    ],
+    "charm": []
   },
   {
     "id": 187,
@@ -5287,7 +6467,12 @@
       "drug organizer"
     ],
     "materials": "Brass,Metal,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Red"
+    ],
+    "charm": []
   },
   {
     "id": 188,
@@ -5316,7 +6501,12 @@
       "gold steel fancy"
     ],
     "materials": "Metal,Brass,Resin,Mirror",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Red"
+    ],
+    "charm": []
   },
   {
     "id": 189,
@@ -5346,7 +6536,15 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "Bronze",
+      "Blue"
+    ],
+    "charm": [
+      "Angel & Cherub"
+    ]
   },
   {
     "id": 190,
@@ -5374,7 +6572,12 @@
       "travel organizer"
     ],
     "materials": "Stainless steel,Resin,Brass",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": []
   },
   {
     "id": 191,
@@ -5403,7 +6606,14 @@
       "birthday present"
     ],
     "materials": "Stainless steel",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Black"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 192,
@@ -5431,7 +6641,14 @@
       "handmade Bon voyage"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "charm": [
+      "Snake"
+    ]
   },
   {
     "id": 193,
@@ -5460,7 +6677,14 @@
       "portable non slip"
     ],
     "materials": "Stainless steel,Resin",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": [
+      "Bee"
+    ]
   },
   {
     "id": 194,
@@ -5487,6 +6711,13 @@
       "groomsmen trinkets"
     ],
     "materials": "Steel",
-    "inStock": true
+    "inStock": true,
+    "color": [
+      "Silver",
+      "Blue"
+    ],
+    "charm": [
+      "Flower & Botanical"
+    ]
   }
 ]

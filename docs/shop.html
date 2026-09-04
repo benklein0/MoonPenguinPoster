@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop — The Moon Penguin Shop</title>
-  <meta name="description" content="Browse 194 handmade brass and resin accessories. Pill boxes, bag hooks, compact mirrors and more — made by hand in Westport, CT.">
+  <title>Shop | The Moon Penguin Shop</title>
+  <meta name="description" content="Browse 194 handmade brass and resin accessories. Pill boxes, bag hooks, compact mirrors and more, made by hand in Westport, CT.">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://themoonpenguinshop.com/shop.html">
-  <meta property="og:title" content="Shop All — The Moon Penguin Shop">
-  <meta property="og:description" content="Browse 194 handmade brass and resin accessories. Pill boxes, bag hooks, compact mirrors and more — made by hand in Westport, CT.">
+  <meta property="og:title" content="Shop All | The Moon Penguin Shop">
+  <meta property="og:description" content="Browse 194 handmade brass and resin accessories. Pill boxes, bag hooks, compact mirrors and more, made by hand in Westport, CT.">
   <meta property="og:image" content="https://i.etsystatic.com/49661368/r/il/f5c859/7484267574/il_fullxfull.7484267574_s1q0.jpg">
   <meta property="og:site_name" content="The Moon Penguin Shop">
   <link rel="canonical" href="https://themoonpenguinshop.com/shop.html">
@@ -19,7 +19,7 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Shop All — The Moon Penguin Shop",
+    "name": "Shop All | The Moon Penguin Shop",
     "description": "Browse 194 handmade brass and resin accessories made by hand in Westport, CT.",
     "url": "https://themoonpenguinshop.com/shop.html",
     "isPartOf": {"@type": "WebSite", "url": "https://themoonpenguinshop.com"}
@@ -47,13 +47,14 @@
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; justify-content: space-between; align-items: center;
-      padding: 20px 48px;
-      background: rgba(250,247,242,0.95); backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(201,169,110,0.2);
+      padding: 24px 48px;
+      background: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 169, 110, 0.2);
     }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--dark); text-decoration: none; }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.3s; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: var(--dark); text-decoration: none; }
+    .nav-links { display: flex; gap: 40px; list-style: none; }
+    .nav-links a { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.3s; }
     .nav-links a:hover, .nav-links a.active { color: var(--gold); }
 
     /* HERO */
@@ -86,6 +87,17 @@
       transition: all 0.2s;
     }
     .filter-btn:hover, .filter-btn.active { background: var(--dark); color: var(--cream); border-color: var(--dark); }
+    .filter-select {
+      padding: 7px 14px;
+      border: 1px solid rgba(201,169,110,0.4);
+      background: transparent;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      color: var(--mid);
+      cursor: pointer;
+      outline: none;
+    }
     .search-box {
       margin-left: auto;
       padding: 7px 16px;
@@ -172,6 +184,15 @@
       cursor: pointer; transition: all 0.3s; width: 100%; text-decoration: none; display: block; text-align: center;
     }
     .btn-etsy:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-add-cart {
+      background: transparent; color: var(--dark);
+      border: 1px solid var(--dark);
+      padding: 14px 32px; margin-top: 10px;
+      font-family: 'Jost', sans-serif; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.3s; width: 100%;
+    }
+    .btn-add-cart:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-add-cart:disabled { background: var(--muted); border-color: var(--muted); color: var(--cream); cursor: not-allowed; }
     .loading-spinner { display: none; text-align: center; padding: 8px; font-size: 0.78rem; color: var(--muted); }
 
     /* FOOTER */
@@ -196,11 +217,13 @@
 <body>
 
 <nav>
-  <a href="/" class="nav-logo">The Moon Penguin Shop</a>
+  <a href="/" class="nav-logo" style="display:flex;align-items:center;"><img src="/logo.png" alt="The Moon Penguin Shop" style="height:48px;width:auto;object-fit:contain;"></a>
   <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/shop.html" class="active">Shop</a></li>
     <li><a href="/#about">About</a></li>
+    <li><a href="/#collections">Collections</a></li>
+    <li><a href="/shop.html" class="active">Shop</a></li>
+    <li><a href="/customize.html">Customize</a></li>
+    <li><a href="https://www.etsy.com/shop/TheMoonPenguinShop" target="_blank">Etsy</a></li>
     <li><a href="https://www.instagram.com/themoonpenguinshop" target="_blank">Instagram</a></li>
   </ul>
 </nav>
@@ -208,7 +231,7 @@
 <div class="shop-hero">
   <div>
     <h1>The <em>Full</em> Collection</h1>
-    <p style="color:var(--mid);font-size:0.88rem;margin-top:8px;line-height:1.8;">194 handmade pieces — each one lovingly crafted by hand in Westport, CT</p>
+    <p style="color:var(--mid);font-size:0.88rem;margin-top:8px;line-height:1.8;">194 handmade pieces, each one lovingly crafted by hand in Westport, CT</p>
   </div>
   <div class="product-count" id="count-display">194 pieces</div>
 </div>
@@ -221,6 +244,19 @@
   <button class="filter-btn" data-filter="compact mirror">Compact Mirrors</button>
   <button class="filter-btn" data-filter="keychain">Keychains</button>
   <button class="filter-btn" data-filter="cufflinks">Cufflinks</button>
+  <select class="filter-select" id="color-select">
+    <option value="">Color: Any</option>
+  </select>
+  <select class="filter-select" id="charm-select">
+    <option value="">Charm: Any</option>
+  </select>
+  <select class="filter-select" id="price-select">
+    <option value="">Price: Any</option>
+    <option value="0-25">Under $25</option>
+    <option value="25-50">$25 &ndash; $50</option>
+    <option value="50-100">$50 &ndash; $100</option>
+    <option value="100-999999">$100+</option>
+  </select>
   <input type="text" class="search-box" placeholder="Search products..." id="search-input">
 </div>
 
@@ -242,7 +278,8 @@
       <div class="modal-qty" id="modal-qty"></div>
       <div class="modal-desc" id="modal-desc"></div>
       <div class="modal-materials" id="modal-materials"></div>
-      <button class="btn-buy" id="btn-buy">Buy Now — Checkout</button>
+      <button class="btn-buy" id="btn-buy">Buy Now</button>
+      <button class="btn-add-cart" id="btn-add-cart">Add to Cart</button>
       <div class="loading-spinner" id="loading-spinner">Processing...</div>
       <a href="#" class="btn-etsy" id="btn-etsy" target="_blank">View on Etsy</a>
     </div>
@@ -261,19 +298,53 @@
 
 <script>
 const STRIPE_KEY = 'pk_live_51QYBNI07mBpGH0WMuI5clu9FlwIhISlJtuimmmLUUCpExEIvzUGtd7dXOYt9VWwnlGlk9PDeaGZhcZ55wlUZJ11O00NJJi5e3K';
-const CHECKOUT_API = 'https://moonpenguin-checkout.vercel.app/api/checkout'; // we'll deploy this next
+const CHECKOUT_API = 'https://moonpenguin-checkout.vercel.app/api/checkout';
 const stripe = Stripe(STRIPE_KEY);
+
+const COLOR_OPTIONS = ['Gold', 'Silver', 'Bronze', 'Blue', 'Pink', 'Red', 'Green', 'Purple', 'Black', 'White', 'Pastel', 'Multicolor'];
+const CHARM_OPTIONS = ['Bee', 'Bunny & Rabbit', 'Snake', 'Butterfly', 'Angel & Cherub', 'Lion & Zodiac', 'Fox', 'Skull & Pirate', 'Flower & Botanical', 'Elephant', 'Unicorn', 'Moon & Celestial', 'Bird', 'Bow'];
 
 let products = [];
 let currentProduct = null;
-let activeFilter = 'all';
+let activeCategory = 'all';
+let activeColor = '';
+let activeCharm = '';
+let activePriceRange = '';
 let searchQuery = '';
 
 // Load products
 async function loadProducts() {
   const res = await fetch('/products.json');
   products = await res.json();
+  populateFacetOptions();
+  applyFiltersFromURL();
   renderGrid();
+}
+
+function populateFacetOptions() {
+  const colorSelect = document.getElementById('color-select');
+  const charmSelect = document.getElementById('charm-select');
+  COLOR_OPTIONS.forEach(c => {
+    if (products.some(p => (p.color || []).includes(c))) {
+      colorSelect.insertAdjacentHTML('beforeend', `<option value="${c}">${c}</option>`);
+    }
+  });
+  CHARM_OPTIONS.forEach(c => {
+    if (products.some(p => (p.charm || []).includes(c))) {
+      charmSelect.insertAdjacentHTML('beforeend', `<option value="${c}">${c}</option>`);
+    }
+  });
+}
+
+// Support links like /shop.html?filter=pill+box from the homepage footer
+function applyFiltersFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const filterParam = params.get('filter');
+  if (!filterParam) return;
+  activeCategory = filterParam.toLowerCase();
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.filter === activeCategory);
+  });
 }
 
 function getEtsySlug(title) {
@@ -288,10 +359,17 @@ function getEtsyUrl(product) {
 function filterProducts() {
   return products.filter(p => {
     const titleLower = p.title.toLowerCase();
-    const matchesFilter = activeFilter === 'all' || titleLower.includes(activeFilter);
-    const matchesSearch = !searchQuery || titleLower.includes(searchQuery) || 
+    const matchesCategory = activeCategory === 'all' || titleLower.includes(activeCategory);
+    const matchesColor = !activeColor || (p.color || []).includes(activeColor);
+    const matchesCharm = !activeCharm || (p.charm || []).includes(activeCharm);
+    let matchesPrice = true;
+    if (activePriceRange) {
+      const [min, max] = activePriceRange.split('-').map(Number);
+      matchesPrice = p.price >= min && p.price <= max;
+    }
+    const matchesSearch = !searchQuery || titleLower.includes(searchQuery) ||
       (p.tags && p.tags.some(t => t.toLowerCase().includes(searchQuery)));
-    return matchesFilter && matchesSearch;
+    return matchesCategory && matchesColor && matchesCharm && matchesPrice && matchesSearch;
   });
 }
 
@@ -347,7 +425,14 @@ function openModal(id) {
   // Buy button
   const buyBtn = document.getElementById('btn-buy');
   buyBtn.disabled = !product.inStock;
-  buyBtn.textContent = product.inStock ? 'Buy Now — Checkout' : 'Out of Stock';
+  buyBtn.style.display = '';
+  buyBtn.textContent = product.inStock ? 'Buy Now' : 'Out of Stock';
+  document.getElementById('loading-spinner').style.display = 'none';
+
+  // Add to cart button
+  const addCartBtn = document.getElementById('btn-add-cart');
+  addCartBtn.disabled = !product.inStock;
+  addCartBtn.textContent = product.inStock ? 'Add to Cart' : 'Out of Stock';
 
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -397,14 +482,41 @@ document.getElementById('btn-buy').addEventListener('click', async () => {
   }
 });
 
+// Add to cart
+document.getElementById('btn-add-cart').addEventListener('click', () => {
+  if (!currentProduct || !currentProduct.inStock || !window.MoonPenguinCart) return;
+  window.MoonPenguinCart.addItem({
+    productId: currentProduct.id,
+    title: currentProduct.title,
+    price: currentProduct.price,
+    image: currentProduct.images[0],
+    quantity: 1
+  });
+  closeModal();
+});
+
 // Filter buttons
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    activeFilter = btn.dataset.filter;
+    activeCategory = btn.dataset.filter;
     renderGrid();
   });
+});
+
+// Color / charm / price facet selects
+document.getElementById('color-select').addEventListener('change', e => {
+  activeColor = e.target.value;
+  renderGrid();
+});
+document.getElementById('charm-select').addEventListener('change', e => {
+  activeCharm = e.target.value;
+  renderGrid();
+});
+document.getElementById('price-select').addEventListener('change', e => {
+  activePriceRange = e.target.value;
+  renderGrid();
 });
 
 // Search
@@ -422,5 +534,6 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 
 loadProducts();
 </script>
+<script src="/cart.js"></script>
 </body>
 </html>

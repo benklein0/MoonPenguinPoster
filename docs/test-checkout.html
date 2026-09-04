@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout Test — The Moon Penguin Shop</title>
+  <title>Checkout Test | The Moon Penguin Shop</title>
   <script src="https://js.stripe.com/v3/"></script>
   <style>
     body { font-family: Georgia, serif; max-width: 500px; margin: 100px auto; padding: 24px; text-align: center; }
@@ -20,8 +20,8 @@
 </head>
 <body>
   <h1>🐧 Checkout Test</h1>
-  <p>Test product — $0.50<br>This is just to verify the payment flow works end to end.</p>
-  <button onclick="testCheckout()">Buy Now — $0.50</button>
+  <p>Test product: $0.50<br>This is just to verify the payment flow works end to end.</p>
+  <button onclick="testCheckout()">Buy Now ($0.50)</button>
   <div id="status"></div>
 
   <script>
@@ -34,7 +34,7 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            title: 'Test Product — Checkout Verification',
+            title: 'Test Product (Checkout Verification)',
             price: 0.50,
             image: 'https://i.etsystatic.com/49661368/r/il/f5c859/7484267574/il_fullxfull.7484267574_s1q0.jpg',
             productId: 'test'
