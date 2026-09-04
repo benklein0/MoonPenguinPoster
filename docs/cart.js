@@ -31,6 +31,11 @@
     renderDrawer();
   }
 
+  function clearCart() {
+    saveCart([]);
+    renderDrawer();
+  }
+
   function setQuantity(productId, qty) {
     const cart = getCart();
     const item = cart.find(i => String(i.productId) === String(productId));
@@ -73,6 +78,7 @@
       '<div class="mps-cart-footer">' +
       '<div class="mps-cart-subtotal"></div>' +
       '<button type="button" class="mps-cart-checkout">Checkout</button>' +
+      '<button type="button" class="mps-cart-clear" hidden>Clear Cart</button>' +
       '<div class="mps-cart-status"></div>' +
       '</div></div>';
     document.body.appendChild(overlay);
@@ -83,6 +89,10 @@
     overlay.querySelector('.mps-cart-close').addEventListener('click', closeDrawer);
     overlay.addEventListener('click', e => { if (e.target === overlay) closeDrawer(); });
     overlay.querySelector('.mps-cart-checkout').addEventListener('click', checkout);
+    overlay.querySelector('.mps-cart-clear').addEventListener('click', () => {
+      if (getCart().length === 0) return;
+      if (window.confirm('Remove all items from your cart?')) clearCart();
+    });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
 
     renderBadge();
@@ -132,6 +142,9 @@
       )).join('');
     }
     subtotalEl.textContent = 'Subtotal: $' + cartTotal().toFixed(2);
+
+    const clearBtn = document.querySelector('.mps-cart-clear');
+    if (clearBtn) clearBtn.hidden = cart.length === 0;
 
     itemsEl.querySelectorAll('.mps-cart-item').forEach(row => {
       const id = row.dataset.id;
@@ -196,6 +209,8 @@
       '.mps-cart-checkout{width:100%;background:var(--dark,#1a1612);color:var(--cream,#f5f0e8);border:none;padding:14px;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;}' +
       '.mps-cart-checkout:hover{background:var(--gold,#c9a96e);color:var(--dark,#1a1612);}' +
       '.mps-cart-checkout:disabled{opacity:0.6;cursor:not-allowed;}' +
+      '.mps-cart-clear{display:block;width:100%;text-align:center;background:none;border:none;color:var(--muted,#9e8e7a);font-size:0.72rem;letter-spacing:0.05em;text-decoration:underline;cursor:pointer;margin-top:12px;padding:0;font-family:"Jost",sans-serif;}' +
+      '.mps-cart-clear:hover{color:var(--dark,#1a1612);}' +
       '.mps-cart-status{font-size:0.75rem;color:var(--muted,#9e8e7a);margin-top:10px;text-align:center;}' +
       '@media (max-width:480px){.mps-cart-drawer{max-width:100%;}}';
     document.head.appendChild(style);
@@ -207,5 +222,5 @@
     mountUI();
   }
 
-  window.MoonPenguinCart = { addItem, removeItem, setQuantity, getCart, cartCount, cartTotal };
+  window.MoonPenguinCart = { addItem, removeItem, setQuantity, clearCart, getCart, cartCount, cartTotal };
 })();
