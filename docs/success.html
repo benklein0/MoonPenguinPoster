@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKKNWWETP0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HKKNWWETP0');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order Confirmed | The Moon Penguin Shop</title>
@@ -26,5 +34,32 @@
   <div class="divider"></div>
   <p style="font-size:0.82rem;">Questions? Email us at <a href="mailto:themoonpenguinshop@gmail.com" style="color:var(--gold);">themoonpenguinshop@gmail.com</a></p>
   <a href="/shop.html" class="btn">Continue Shopping</a>
+
+  <script>
+    (function () {
+      var CART_KEY = 'mps_cart_v1';
+      var LAST_ORDER_KEY = 'mps_last_order_v1';
+      try {
+        var raw = localStorage.getItem(LAST_ORDER_KEY);
+        if (raw) {
+          var order = JSON.parse(raw);
+          var params = new URLSearchParams(window.location.search);
+          var sessionId = params.get('session_id');
+          if (typeof gtag === 'function') {
+            gtag('event', 'purchase', {
+              transaction_id: sessionId || ('order_' + Date.now()),
+              currency: order.currency || 'USD',
+              value: order.value,
+              items: order.items
+            });
+          }
+          // Snapshot consumed - remove it so a page refresh doesn't double-report.
+          localStorage.removeItem(LAST_ORDER_KEY);
+        }
+      } catch (e) {}
+      // Order is complete either way - clear the cart so it's empty on the next visit.
+      try { localStorage.removeItem(CART_KEY); } catch (e) {}
+    })();
+  </script>
 </body>
 </html>

@@ -3,8 +3,25 @@
 // Persists to localStorage so the cart follows the visitor across pages.
 (function () {
   const CART_KEY = 'mps_cart_v1';
+  const LAST_ORDER_KEY = 'mps_last_order_v1';
   const CHECKOUT_API = 'https://moonpenguin-checkout.vercel.app/api/checkout';
   const STRIPE_KEY = 'pk_live_51QYBNI07mBpGH0WMuI5clu9FlwIhISlJtuimmmLUUCpExEIvzUGtd7dXOYt9VWwnlGlk9PDeaGZhcZ55wlUZJ11O00NJJi5e3K';
+
+  // Fire a GA4 event if gtag() has loaded on this page. Safe no-op otherwise.
+  function trackEvent(name, params) {
+    try {
+      if (typeof window.gtag === 'function') window.gtag('event', name, params);
+    } catch (e) {}
+  }
+
+  function toGaItem(item) {
+    return {
+      item_id: String(item.productId),
+      item_name: item.title,
+      price: item.price,
+      quantity: item.quantity || 1
+    };
+  }
 
   function getCart() {
     try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
@@ -19,16 +36,30 @@
   function addItem(item) {
     const cart = getCart();
     const existing = cart.find(i => String(i.productId) === String(item.productId));
-    if (existing) existing.quantity += item.quantity || 1;
-    else cart.push(Object.assign({}, item, { quantity: item.quantity || 1 }));
+    const qty = item.quantity || 1;
+    if (existing) existing.quantity += qty;
+    else cart.push(Object.assign({}, item, { quantity: qty }));
     saveCart(cart);
     renderDrawer();
     openDrawer();
+    trackEvent('add_to_cart', {
+      currency: 'USD',
+      value: item.price * qty,
+      items: [toGaItem(Object.assign({}, item, { quantity: qty }))]
+    });
   }
 
   function removeItem(productId) {
+    const removed = getCart().find(i => String(i.productId) === String(productId));
     saveCart(getCart().filter(i => String(i.productId) !== String(productId)));
     renderDrawer();
+    if (removed) {
+      trackEvent('remove_from_cart', {
+        currency: 'USD',
+        value: removed.price * removed.quantity,
+        items: [toGaItem(removed)]
+      });
+    }
   }
 
   function clearCart() {
@@ -163,6 +194,25 @@
     const status = document.querySelector('.mps-cart-status');
     btn.disabled = true;
     status.textContent = 'Redirecting to secure checkout...';
+
+    trackEvent('begin_checkout', {
+      currency: 'USD',
+      value: cartTotal(),
+      items: cart.map(toGaItem)
+    });
+
+    // Stash a snapshot so success.html can report the actual "purchase" event
+    // once Stripe redirects back (localStorage doesn't survive the round trip
+    // any differently than this, but the cart itself gets cleared on success,
+    // so we need our own copy to report from).
+    try {
+      localStorage.setItem(LAST_ORDER_KEY, JSON.stringify({
+        value: cartTotal(),
+        currency: 'USD',
+        items: cart.map(toGaItem)
+      }));
+    } catch (e) {}
+
     try {
       if (!window.Stripe) throw new Error('Stripe.js did not load on this page');
       const stripe = window.Stripe(STRIPE_KEY);
