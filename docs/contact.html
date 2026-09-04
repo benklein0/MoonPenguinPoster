@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customize | The Moon Penguin Shop</title>
-  <meta name="description" content="Request a custom handmade piece from The Moon Penguin Shop. Pick a product type, color, base metal, and charm, and Camilla will reach out to make it real.">
-  <link rel="canonical" href="https://themoonpenguinshop.com/customize.html">
+  <title>Contact | The Moon Penguin Shop</title>
+  <meta name="description" content="Get in touch with The Moon Penguin Shop. Questions about an order, a custom piece, or anything else, send Camilla a message.">
+  <link rel="canonical" href="https://themoonpenguinshop.com/contact.html">
   <meta name="robots" content="index, follow">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +61,7 @@
       color: var(--dark);
       outline: none;
     }
-    .field textarea { resize: vertical; min-height: 100px; }
+    .field textarea { resize: vertical; min-height: 140px; }
     .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .btn-submit {
       display: inline-block; width: 100%;
@@ -75,6 +75,10 @@
     .form-status { margin-top: 16px; font-size: 0.85rem; text-align: center; min-height: 1.2em; }
     .form-status.success { color: #4a7a4a; }
     .form-status.error { color: #a33; }
+
+    .contact-alt { text-align: center; margin-top: 8px; font-size: 0.85rem; color: var(--mid); }
+    .contact-alt a { color: var(--gold); text-decoration: none; }
+    .contact-alt a:hover { text-decoration: underline; }
 
     /* FOOTER */
     footer { background: var(--dark); color: var(--cream); padding: 40px 80px; display: flex; justify-content: space-between; align-items: center; }
@@ -100,86 +104,20 @@
     <li><a href="/#about">About</a></li>
     <li><a href="/#collections">Collections</a></li>
     <li><a href="/shop.html">Shop</a></li>
-    <li><a href="/customize.html" class="active">Customize</a></li>
-    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="/customize.html">Customize</a></li>
+    <li><a href="/contact.html" class="active">Contact</a></li>
     <li><a href="https://www.etsy.com/shop/TheMoonPenguinShop" target="_blank">Etsy</a></li>
     <li><a href="https://www.instagram.com/themoonpenguinshop" target="_blank">Instagram</a></li>
   </ul>
 </nav>
 
 <div class="page-hero">
-  <h1>Design Your <em>Own</em> Piece</h1>
-  <p>Pick a product type, color, base metal, and charm, and Camilla will follow up by email to make it real. Custom pieces are made to order, so please allow extra time.</p>
+  <h1>Get In <em>Touch</em></h1>
+  <p>Questions about an order, a piece you're eyeing, or anything else? Send Camilla a message and she'll get back to you soon.</p>
 </div>
 
 <div class="form-wrap">
-  <form id="custom-order-form">
-    <div class="field">
-      <label for="productType">Product Type</label>
-      <select id="productType" name="productType" required>
-        <option value="">Choose one</option>
-        <option value="Pill Box">Pill Box</option>
-        <option value="Bag Hook">Bag Hook</option>
-        <option value="Compact Mirror">Compact Mirror</option>
-        <option value="Keychain">Keychain</option>
-        <option value="Cufflinks">Cufflinks</option>
-        <option value="Other">Other</option>
-      </select>
-    </div>
-
-    <div class="field-row">
-      <div class="field">
-        <label for="color">Color</label>
-        <select id="color" name="color">
-          <option value="">No preference</option>
-          <option>Gold</option>
-          <option>Silver</option>
-          <option>Bronze</option>
-          <option>Blue</option>
-          <option>Pink</option>
-          <option>Red</option>
-          <option>Green</option>
-          <option>Purple</option>
-          <option>Black</option>
-          <option>White</option>
-          <option>Pastel</option>
-          <option>Multicolor</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="baseMetal">Base Metal</label>
-        <select id="baseMetal" name="baseMetal">
-          <option value="">No preference</option>
-          <option>Brass</option>
-          <option>Silver-tone</option>
-          <option>Gold-tone</option>
-          <option>Mixed</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="charm">Charm / Theme</label>
-      <select id="charm" name="charm">
-        <option value="">No preference</option>
-        <option>Bee</option>
-        <option>Bunny &amp; Rabbit</option>
-        <option>Snake</option>
-        <option>Butterfly</option>
-        <option>Angel &amp; Cherub</option>
-        <option>Lion &amp; Zodiac</option>
-        <option>Fox</option>
-        <option>Skull &amp; Pirate</option>
-        <option>Flower &amp; Botanical</option>
-        <option>Elephant</option>
-        <option>Unicorn</option>
-        <option>Moon &amp; Celestial</option>
-        <option>Bird</option>
-        <option>Bow</option>
-        <option value="Other">Other, describe below</option>
-      </select>
-    </div>
-
+  <form id="contact-form">
     <div class="field-row">
       <div class="field">
         <label for="name">Your Name</label>
@@ -192,13 +130,14 @@
     </div>
 
     <div class="field">
-      <label for="notes">Notes (optional)</label>
-      <textarea id="notes" name="notes" placeholder="Anything else you'd like Camilla to know, sizing, inspiration photos you'll send separately, timeline, etc."></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required placeholder="How can we help?"></textarea>
     </div>
 
-    <button type="submit" class="btn-submit" id="submit-btn">Submit Request</button>
+    <button type="submit" class="btn-submit" id="submit-btn">Send Message</button>
     <div class="form-status" id="form-status"></div>
   </form>
+  <p class="contact-alt">You can also reach us directly at <a href="mailto:themoonpenguinshop@gmail.com">themoonpenguinshop@gmail.com</a></p>
 </div>
 
 <footer>
@@ -212,30 +151,26 @@
 </footer>
 
 <script>
-const CUSTOM_ORDER_API = 'https://moonpenguin-checkout.vercel.app/api/custom-order';
+const CONTACT_API = 'https://moonpenguin-checkout.vercel.app/api/contact';
 
-document.getElementById('custom-order-form').addEventListener('submit', async (e) => {
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = document.getElementById('submit-btn');
   const status = document.getElementById('form-status');
   const form = e.target;
 
   const payload = {
-    productType: form.productType.value,
-    color: form.color.value,
-    baseMetal: form.baseMetal.value,
-    charm: form.charm.value,
     name: form.name.value.trim(),
     email: form.email.value.trim(),
-    notes: form.notes.value.trim(),
+    message: form.message.value.trim(),
   };
 
   btn.disabled = true;
   status.className = 'form-status';
-  status.textContent = 'Sending your request...';
+  status.textContent = 'Sending your message...';
 
   try {
-    const res = await fetch(CUSTOM_ORDER_API, {
+    const res = await fetch(CONTACT_API, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
@@ -244,12 +179,12 @@ document.getElementById('custom-order-form').addEventListener('submit', async (e
     if (!res.ok || data.error) throw new Error(data.error || 'Something went wrong');
 
     status.className = 'form-status success';
-    status.textContent = "Thank you! Camilla will email you soon to talk through your custom piece.";
+    status.textContent = "Thank you! Camilla will get back to you soon.";
     form.reset();
   } catch (err) {
-    console.error('Custom order error:', err);
+    console.error('Contact form error:', err);
     status.className = 'form-status error';
-    status.textContent = 'Something went wrong sending your request. Please try again, or email themoonpenguinshop@gmail.com directly.';
+    status.textContent = 'Something went wrong sending your message. Please try again, or email themoonpenguinshop@gmail.com directly.';
   } finally {
     btn.disabled = false;
   }
