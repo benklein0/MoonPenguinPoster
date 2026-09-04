@@ -66,7 +66,7 @@ async function test() {
       console.log('Step 4: Uploading to Instagram...');
       await uploadReel(videoPath, caption);
 
-      if (process.env.PINTEREST_ACCESS_TOKEN && process.env.PINTEREST_BOARD_ID) {
+      if ((process.env.PINTEREST_ACCESS_TOKEN || process.env.PINTEREST_REFRESH_TOKEN) && process.env.PINTEREST_BOARD_ID) {
         console.log('Step 5: Posting to Pinterest...');
         await createPin(listing, caption);
       }

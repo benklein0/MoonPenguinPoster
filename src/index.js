@@ -90,7 +90,7 @@ async function runPipeline() {
     await uploadReel(videoPath, caption);
 
     // Post to Pinterest if configured
-    if (process.env.PINTEREST_ACCESS_TOKEN && process.env.PINTEREST_BOARD_ID) {
+    if ((process.env.PINTEREST_ACCESS_TOKEN || process.env.PINTEREST_REFRESH_TOKEN) && process.env.PINTEREST_BOARD_ID) {
       try {
         await createPin(listing, caption);
       } catch (pinErr) {
