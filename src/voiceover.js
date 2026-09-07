@@ -45,28 +45,52 @@ Return ONLY the script text, nothing else.`;
 async function generateVoiceover(script) {
   console.log('🎙️  Generating voiceover with ElevenLabs...');
 
-  const response = await axios.post(
-    `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,
-    {
-      text: script,
-      model_id: 'eleven_multilingual_v2',
-      voice_settings: {
-        stability: 0.5,
-        similarity_boost: 0.75,
-        style: 0.3,
-        use_speaker_boost: true
-      }
-    },
-    {
-      headers: {
-        'xi-api-key': ELEVENLABS_API_KEY,
-        'Content-Type': 'application/json',
-        'Accept': 'audio/mpeg'
+  if (!ELEVENLABS_API_KEY) {
+    throw new Error('Missing ELEVENLABS_API_KEY env var');
+  }
+
+  let response;
+  try {
+    response = await axios.post(
+      `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,
+      {
+        text: script,
+        model_id: 'eleven_multilingual_v2',
+        voice_settings: {
+          stability: 0.5,
+          similarity_boost: 0.75,
+          style: 0.3,
+          use_speaker_boost: true
+        }
       },
-      responseType: 'arraybuffer',
-      timeout: 30000
+      {
+        headers: {
+          'xi-api-key': ELEVENLABS_API_KEY,
+          'Content-Type': 'application/json',
+          'Accept': 'audio/mpeg'
+        },
+        responseType: 'arraybuffer',
+        timeout: 30000
+      }
+    );
+  } catch (err) {
+    // With responseType: 'arraybuffer', axios hands back the error body as
+    // raw bytes too -- decode it so the real reason (invalid voice_id,
+    // quota_exceeded, etc.) shows up in the logs instead of just
+    // "Request failed with status code 400".
+    if (err.response && err.response.data) {
+      let detail;
+      try {
+        detail = Buffer.from(err.response.data).toString('utf8');
+        const parsed = JSON.parse(detail);
+        detail = parsed?.detail?.message || parsed?.detail?.status || detail;
+      } catch (parseErr) {
+        // detail stays as the raw decoded text if it wasn't JSON
+      }
+      throw new Error(`ElevenLabs ${err.response.status}: ${detail}`);
     }
-  );
+    throw err;
+  }
 
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   const audioPath = path.join(OUTPUT_DIR, 'voiceover.mp3');
